@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OC Garage Cleanout — Flat $599 Garage Cleanout in Orange County</title>
+  <meta name="description" content="We clean out your entire garage for a flat $599. Haul away, sweep clean, donation of usable items. Serving Costa Mesa, Newport Beach, Irvine, Huntington Beach and all OC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue: #1a5cff;
+      --blue-light: rgba(26, 92, 255, 0.06);
+      --blue-border: rgba(26, 92, 255, 0.18);
+      --blue-glow: 0 0 0 1px rgba(26, 92, 255, 0.18), 0 4px 24px rgba(26, 92, 255, 0.10);
+      --blue-hover: #1550e0;
+      --bg: #ffffff;
+      --bg-alt: #f8f9fa;
+      --border: #e5e7eb;
+      --border-light: #f0f1f3;
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --text-light: #9ca3af;
+      --green: #22c55e;
+      --green-bg: rgba(34, 197, 94, 0.07);
+      --red: #f87171;
+      --red-bg: rgba(248, 113, 113, 0.07);
+      --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 28px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --radius-sm: 10px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: auto; }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .nav-phone {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--blue-light);
+      transition: all 0.2s;
+    }
+
+    .nav-phone:active { transform: scale(0.97); }
+    .nav-phone svg { width: 14px; height: 14px; }
+
+    /* ─── SHARED ─── */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
+    }
+
+    .section-label {
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.65;
+      max-width: 520px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn:active { transform: scale(0.97); }
+    .btn svg { width: 16px; height: 16px; }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 2px 8px rgba(26, 92, 255, 0.25);
+    }
+
+    .btn-primary:hover { background: var(--blue-hover); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn-secondary:hover {
+      border-color: #d1d5db;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding-top: 60px;
+      background: var(--bg);
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 64px 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--blue-light);
+      border: 1px solid var(--blue-border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 20px;
+      animation: fadeDown 0.5s ease-out;
+    }
+
+    .hero-badge .pulse {
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 16px;
+      animation: fadeUp 0.5s ease-out 0.1s both;
+    }
+
+    .hero .price-highlight { color: var(--blue); }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 460px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.5s ease-out 0.15s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      animation: fadeUp 0.5s ease-out 0.2s both;
+    }
+
+    .hero-image-wrap {
+      flex: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: fadeUp 0.6s ease-out 0.25s both;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .section-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .section-photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--blue-light);
+      border: 1px solid var(--blue-border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--blue);
+    }
+
+    .step-content h3 {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ─── WHAT'S INCLUDED — ICON GRID ─── */
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .included-item {
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .included-item .item-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 14px;
+      background: var(--green-bg);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .included-item .item-icon svg {
+      width: 22px;
+      height: 22px;
+      color: var(--green);
+    }
+
+    .included-item h3 {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .included-item p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .included-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .included-photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* ─── WHAT WE DON'T TAKE ─── */
+    .x-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .x-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 14px 18px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .x-list li .icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--red-bg);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .x-list li .icon svg {
+      width: 12px;
+      height: 12px;
+      color: var(--red);
+    }
+
+    /* ─── PRICING ─── */
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .pricing-card {
+      padding: 30px 26px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: white;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(26, 92, 255, 0.25);
+      box-shadow: var(--blue-glow);
+    }
+
+    .pricing-card .tag {
+      position: absolute;
+      top: -11px;
+      right: 22px;
+      padding: 4px 14px;
+      background: var(--blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pricing-card .price {
+      font-weight: 700;
+      font-size: 44px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .pricing-card.featured .price { color: var(--blue); }
+
+    .pricing-card .price-label {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+
+    .pricing-card .price-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .pricing-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      background: var(--blue-light);
+      border: 1px solid var(--blue-border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .pricing-note svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--blue);
+      margin-top: 2px;
+    }
+
+    /* ─── SERVICE AREA ─── */
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .city {
+      padding: 14px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      color: var(--text);
+      box-shadow: var(--shadow-xs);
+    }
+
+    /* ─── POLICIES ─── */
+    .policy-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .policy-card {
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .policy-card h3 {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .policy-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .faq-question svg {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      color: var(--text-light);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-question svg { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 20px 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer { max-height: 200px; }
+
+    .faq-item.open {
+      border-color: var(--blue-border);
+      box-shadow: var(--blue-glow);
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      padding: 48px 24px;
+      text-align: center;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-phone {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .footer-phone svg { width: 18px; height: 18px; }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (min-width: 640px) {
+      .hero h1 { font-size: 44px; }
+
+      .hero-buttons {
+        flex-direction: row;
+      }
+
+      .hero-image-wrap img { height: 340px; }
+
+      .section-title { font-size: 32px; }
+
+      .included-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .city-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .pricing-cards {
+        flex-direction: row;
+      }
+
+      .pricing-card { flex: 1; }
+
+      .policy-cards {
+        flex-direction: row;
+      }
+
+      .policy-card { flex: 1; }
+
+      .section-photo img { height: 280px; }
+    }
+
+    @media (min-width: 900px) {
+      .hero-inner {
+        flex-direction: row;
+        align-items: center;
+        padding: 80px 24px 0;
+        gap: 56px;
+      }
+
+      .hero-text { text-align: left; }
+
+      .hero h1 { font-size: 48px; }
+
+      .hero-image-wrap img { height: 420px; }
+
+      .included-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .city-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .section-photo img { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      OC Garage Cleanout
+    </div>
+    <a href="tel:+19495551234" class="nav-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (949) 555-1234
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          Now booking Saturdays
+        </div>
+        <h1>We Clean Out Your Entire Garage. <span class="price-highlight">Flat $599.</span></h1>
+        <p class="hero-sub">We haul everything out, sweep it clean, and leave you with a garage you can actually use. Serving Costa Mesa, Newport Beach, Irvine, Huntington Beach, and surrounding OC cities.</p>
+        <div class="hero-buttons">
+          <a href="tel:+19495551234" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call to Book
+          </a>
+          <a href="sms:+19495551234" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Text to Book
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200" alt="Clean, organized garage" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-alt reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Three easy steps.</h2>
+        <p class="section-desc">No complicated scheduling. No confusing quotes. Just a simple process from start to finish.</p>
+        <div class="section-photo">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200" alt="Team loading items into truck" loading="lazy">
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Schedule your Saturday</h3>
+              <p>Give us a call or send a text to pick a date that works for you.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>We show up and handle everything</h3>
+              <p>Our crew loads everything out and sweeps it clean. You point, we haul.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Pay when the job is done</h3>
+              <p>No upfront payment. You pay only after you're happy with the result.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT'S INCLUDED -->
+  <div class="reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">What's Included</div>
+        <h2 class="section-title">Everything you need, nothing you don't.</h2>
+        <p class="section-desc">One flat price covers the whole job. No hidden fees, no extra charges at the end.</p>
+        <div class="included-photo">
+          <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800" alt="Clean, organized space" loading="lazy">
+        </div>
+        <div class="included-grid">
+          <div class="included-item">
+            <div class="item-icon">
+              <!-- truck icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Full Haul Away</h3>
+            <p>We remove all unwanted items from your garage</p>
+          </div>
+          <div class="included-item">
+            <div class="item-icon">
+              <!-- broom/sweep icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L12 10"/><path d="M6 10h12l1 12H5L6 10z"/><path d="M9 10V6"/><path d="M15 10V6"/></svg>
+            </div>
+            <h3>Broom Sweep</h3>
+            <p>Garage is swept clean after everything is removed</p>
+          </div>
+          <div class="included-item">
+            <div class="item-icon">
+              <!-- dollar icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Disposal Included</h3>
+            <p>All disposal and dump fees are covered in the price</p>
+          </div>
+          <div class="included-item">
+            <div class="item-icon">
+              <!-- heart icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Charity Donations</h3>
+            <p>Usable items donated to Habitat for Humanity and Goodwill</p>
+          </div>
+          <div class="included-item">
+            <div class="item-icon">
+              <!-- recycle/leaf icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4C7.09 15.62 8 12.69 8 10c0-4-2.5-6-2.5-6"/><path d="M22 2s-2.5 2-2.5 6c0 2.69.91 5.62 2.5 8 1 1.5 2.25 2.75 3.5 4"/><path d="M2 22l10-10"/><path d="M22 2L12 12"/></svg>
+            </div>
+            <h3>Responsible Disposal</h3>
+            <p>Remaining items properly disposed of at OC landfill</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE DON'T TAKE -->
+  <div class="section-alt reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">What We Don't Take</div>
+        <h2 class="section-title">A few things we can't haul.</h2>
+        <p class="section-desc">For safety and environmental reasons, these items require specialized disposal.</p>
+        <ul class="x-list">
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            Hazardous materials
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            Paint or chemicals
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            Electronics and e-waste
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            Construction debris
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            Appliances containing Freon (AC units, refrigerators)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Flat rate. No surprises.</h2>
+        <p class="section-desc">You'll know exactly what you're paying before we lift a single box.</p>
+        <div class="pricing-cards">
+          <div class="pricing-card featured">
+            <span class="tag">Most Garages</span>
+            <div class="price">$599</div>
+            <div class="price-label">Standard garage cleanout</div>
+            <p class="price-desc">Full cleanout, haul away, sweep, disposal included. The price most homeowners pay.</p>
+          </div>
+          <div class="pricing-card">
+            <div class="price">$799</div>
+            <div class="price-label">Oversized or extremely full</div>
+            <p class="price-desc">For garages packed floor-to-ceiling or oversized three-car setups.</p>
+          </div>
+        </div>
+        <div class="pricing-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Price is confirmed and signed off before any work begins. You'll always know the total upfront.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE AREA -->
+  <div class="section-alt reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">Service Area</div>
+        <h2 class="section-title">Proudly serving Orange County.</h2>
+        <p class="section-desc">We're local to OC and know these neighborhoods well. If your city isn't listed, give us a call — we may still be able to help.</p>
+        <div class="city-grid">
+          <div class="city">Costa Mesa</div>
+          <div class="city">Newport Beach</div>
+          <div class="city">Irvine</div>
+          <div class="city">Huntington Beach</div>
+          <div class="city">Laguna Beach</div>
+          <div class="city">Mission Viejo</div>
+          <div class="city">Lake Forest</div>
+          <div class="city">Tustin</div>
+          <div class="city">Orange</div>
+          <div class="city">Anaheim</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POLICIES -->
+  <div class="reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">Policies</div>
+        <h2 class="section-title">The fine print, kept simple.</h2>
+        <p class="section-desc">We believe in being straightforward. Here's everything you need to know.</p>
+        <div class="policy-cards">
+          <div class="policy-card">
+            <h3>Cancellation</h3>
+            <p>24-hour notice required. Cancellations within 24 hours are subject to a $100 fee.</p>
+          </div>
+          <div class="policy-card">
+            <h3>Payment</h3>
+            <p>Cash, Zelle, or Venmo. Payment is due upon job completion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-alt reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Questions we hear most.</h2>
+        <p class="section-desc">If you don't see your question here, give us a call. We're happy to help.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Do I need to be home?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes. An adult must be present for the duration of the job.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How long does it take?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Most jobs take 2 to 4 hours.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What if my garage is really full?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">We assess on arrival and confirm price before starting. No surprises.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you donate or recycle items?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes. We donate usable items to Habitat for Humanity and Goodwill whenever possible. The rest goes to the OC landfill responsibly.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="tel:+19495551234" class="footer-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (949) 555-1234
+    </a>
+    <p>&copy; 2025 OC Garage Cleanout. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('open');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Scroll reveal
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
