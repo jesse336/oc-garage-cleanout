@@ -66,7 +66,7 @@
       right: 0;
       z-index: 100;
       padding: 0 28px;
-      height: 90px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -80,12 +80,28 @@
       display: flex;
       align-items: center;
       flex-shrink: 0;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      gap: 10px;
     }
 
-    .nav-logo img {
-      height: 80px;
-      width: auto;
-      display: block;
+    .nav-logo .logo-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .nav-logo .logo-mark svg {
+      width: 18px;
+      height: 18px;
     }
 
     .nav-links {
@@ -156,7 +172,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 90px;
+      top: 72px;
       left: 0;
       right: 0;
       background: white;
@@ -196,7 +212,7 @@
     }
 
     .section {
-      padding: 88px 0;
+      padding: 104px 0;
     }
 
     .section-alt {
@@ -214,26 +230,27 @@
 
     .section-title {
       font-weight: 700;
-      font-size: 28px;
+      font-size: 30px;
       line-height: 1.2;
       letter-spacing: -0.02em;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .section-desc {
       color: var(--text-secondary);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.65;
-      max-width: 520px;
+      max-width: 540px;
+      margin-bottom: 36px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 14px 28px;
+      gap: 10px;
+      padding: 16px 32px;
       border-radius: var(--radius-sm);
       font-family: 'Inter', sans-serif;
       font-weight: 600;
@@ -268,17 +285,17 @@
 
     /* ─── HERO ─── */
     .hero {
-      padding-top: 90px;
+      padding-top: 72px;
       background: var(--bg);
     }
 
     .hero-inner {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 64px 24px 0;
+      padding: 72px 24px 0;
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 48px;
     }
 
     .hero-text {
@@ -382,14 +399,14 @@
     .steps {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-top: 32px;
+      gap: 14px;
+      margin-top: 8px;
     }
 
     .step {
       display: flex;
-      gap: 16px;
-      padding: 20px;
+      gap: 18px;
+      padding: 24px;
       background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -429,11 +446,11 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
-      margin-top: 32px;
+      margin-top: 8px;
     }
 
     .included-item {
-      padding: 24px;
+      padding: 28px;
       background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -489,17 +506,17 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 28px;
+      gap: 12px;
+      margin-top: 8px;
     }
 
     .x-list li {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       font-size: 15px;
       line-height: 1.5;
-      padding: 14px 18px;
+      padding: 16px 20px;
       background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
@@ -527,12 +544,12 @@
     .pricing-cards {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: 32px;
+      gap: 18px;
+      margin-top: 8px;
     }
 
     .pricing-card {
-      padding: 30px 26px;
+      padding: 34px 28px;
       border-radius: 16px;
       border: 1px solid var(--border);
       background: white;
@@ -609,7 +626,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      margin-top: 28px;
+      margin-top: 8px;
     }
 
     .city {
@@ -628,12 +645,12 @@
     .policy-cards {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-top: 28px;
+      gap: 16px;
+      margin-top: 8px;
     }
 
     .policy-card {
-      padding: 24px;
+      padding: 28px;
       background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -657,8 +674,8 @@
     .faq-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 28px;
+      gap: 12px;
+      margin-top: 8px;
     }
 
     .faq-item {
@@ -719,7 +736,7 @@
 
     /* ─── FOOTER ─── */
     .footer {
-      padding: 48px 24px;
+      padding: 56px 24px;
       text-align: center;
       background: var(--bg-alt);
       border-top: 1px solid var(--border-light);
@@ -764,7 +781,7 @@
 
       .hero-image-wrap img { height: 340px; }
 
-      .section-title { font-size: 32px; }
+      .section-title { font-size: 34px; }
 
       .included-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -811,7 +828,7 @@
       }
 
       .city-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .section-photo img { height: 320px; }
@@ -823,7 +840,8 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="#" class="nav-logo">
-      <img src="OC-garage-cleanout-logo.png" alt="OC Garage Cleanout">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+      OC Garage Cleanout
     </a>
     <div class="nav-links">
       <a href="#how-it-works">How It Works</a>
@@ -856,7 +874,7 @@
       <div class="hero-text">
         <div class="hero-badge">
           <span class="pulse"></span>
-          Now booking Saturdays
+          Saturday appointments only — book yours now
         </div>
         <h1>We Clean Out Your Entire Garage. <span class="price-highlight">Flat $599.</span></h1>
         <p class="hero-sub">We haul everything out, sweep it clean, and leave you with a garage you can actually use. Serving Costa Mesa, Newport Beach, Irvine, Huntington Beach, and surrounding OC cities.</p>
@@ -891,8 +909,8 @@
           <div class="step">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h3>Schedule your Saturday</h3>
-              <p>Give us a call or send a text to pick a date that works for you.</p>
+              <h3>Book your Saturday</h3>
+              <p>We only book Saturdays, so spots fill up fast. Call or text to reserve yours.</p>
             </div>
           </div>
           <div class="step">
@@ -1025,7 +1043,7 @@
         </div>
         <div class="pricing-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <span>Price is confirmed and signed off before any work begins. You'll always know the total upfront.</span>
+          <span>Price is confirmed and signed off before any work begins. You'll always know the total upfront. All jobs are scheduled on Saturdays.</span>
         </div>
       </div>
     </div>
@@ -1049,6 +1067,17 @@
           <div class="city">Tustin</div>
           <div class="city">Orange</div>
           <div class="city">Anaheim</div>
+          <div class="city">Fullerton</div>
+          <div class="city">Brea</div>
+          <div class="city">Yorba Linda</div>
+          <div class="city">Garden Grove</div>
+          <div class="city">Santa Ana</div>
+          <div class="city">Fountain Valley</div>
+          <div class="city">Aliso Viejo</div>
+          <div class="city">Laguna Niguel</div>
+          <div class="city">San Clemente</div>
+          <div class="city">Dana Point</div>
+          <div class="city">San Juan Capistrano</div>
         </div>
       </div>
     </div>
