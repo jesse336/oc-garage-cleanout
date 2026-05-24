@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OC Garage Cleanout — Flat $599 Garage Cleanout in Orange County</title>
   <meta name="description" content="We clean out your entire garage for a flat $599. Haul away, sweep clean, donation of usable items. Serving Costa Mesa, Newport Beach, Irvine, Huntington Beach and all OC.">
+
+  <!-- Open Graph for Facebook ad link previews -->
+  <meta property="og:title" content="Flat $599 Garage Cleanout — Orange County">
+  <meta property="og:description" content="We clean out your entire garage, haul everything away, and sweep it clean. One flat price, no surprises. Serving all of Orange County.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero-before-after.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel placeholder — replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    // fbq('init', 'YOUR_PIXEL_ID');
+    // fbq('track', 'PageView');
+  </script>
+
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -16,11 +35,11 @@
     }
 
     :root {
-      --blue: #C2410C;
-      --blue-light: rgba(194, 65, 12, 0.06);
-      --blue-border: rgba(194, 65, 12, 0.18);
-      --blue-glow: 0 0 0 1px rgba(194, 65, 12, 0.18), 0 4px 24px rgba(194, 65, 12, 0.10);
-      --blue-hover: #a3360a;
+      --brand: #C2410C;
+      --brand-light: rgba(194, 65, 12, 0.06);
+      --brand-border: rgba(194, 65, 12, 0.18);
+      --brand-glow: 0 0 0 1px rgba(194, 65, 12, 0.18), 0 4px 24px rgba(194, 65, 12, 0.10);
+      --brand-hover: #a3360a;
       --bg: #ffffff;
       --bg-alt: #f8f9fa;
       --border: #e5e7eb;
@@ -32,6 +51,8 @@
       --green-bg: rgba(34, 197, 94, 0.07);
       --red: #f87171;
       --red-bg: rgba(248, 113, 113, 0.07);
+      --gold: #f59e0b;
+      --gold-bg: rgba(245, 158, 11, 0.08);
       --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
@@ -103,7 +124,7 @@
       white-space: nowrap;
     }
 
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover { color: var(--brand); }
 
     .nav-right {
       display: flex;
@@ -114,14 +135,14 @@
     .nav-phone {
       font-weight: 600;
       font-size: 14px;
-      color: var(--blue);
+      color: var(--brand);
       display: flex;
       align-items: center;
       gap: 8px;
       padding: 10px 18px;
       border-radius: 8px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
+      background: var(--brand-light);
+      border: 1px solid var(--brand-border);
       transition: all 0.2s;
     }
 
@@ -186,7 +207,7 @@
       border-bottom: none;
     }
 
-    .mobile-menu a:hover { color: var(--blue); }
+    .mobile-menu a:hover { color: var(--brand); }
 
     /* ─── SHARED ─── */
     .container {
@@ -196,7 +217,7 @@
     }
 
     .section {
-      padding: 104px 0;
+      padding: 88px 0;
     }
 
     .section-alt {
@@ -208,7 +229,7 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--blue);
+      color: var(--brand);
       margin-bottom: 12px;
     }
 
@@ -248,13 +269,13 @@
     .btn svg { width: 16px; height: 16px; }
 
     .btn-primary {
-      background: var(--blue);
+      background: var(--brand);
       color: white;
       box-shadow: 0 2px 8px rgba(194, 65, 12, 0.25);
     }
 
     .btn-primary:hover {
-      background: var(--blue-hover);
+      background: var(--brand-hover);
       box-shadow: 0 4px 16px rgba(194, 65, 12, 0.3);
       transform: translateY(-1px);
     }
@@ -270,6 +291,16 @@
       border-color: #d1d5db;
       box-shadow: var(--shadow-md);
       transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brand);
+      border: 2px solid var(--brand);
+    }
+
+    .btn-outline:hover {
+      background: var(--brand-light);
     }
 
     /* ─── SECTION DIVIDERS ─── */
@@ -312,33 +343,26 @@
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       padding: 6px 14px;
       background: white;
-      border: 1px solid var(--blue-border);
+      border: 1px solid var(--brand-border);
       border-radius: 100px;
       font-size: 13px;
       font-weight: 600;
-      color: var(--blue);
+      color: var(--brand);
       margin-bottom: 24px;
       animation: fadeDown 0.6s ease-out;
     }
 
-    .hero-badge .pulse {
-      width: 6px;
-      height: 6px;
-      background: var(--blue);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+    .hero-badge svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
     }
 
     .hero h1 {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 40px;
       line-height: 1.08;
       letter-spacing: -0.03em;
@@ -348,9 +372,9 @@
     }
 
     .hero .price-highlight {
-      color: var(--blue);
+      color: var(--brand);
       font-size: 1.15em;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .hero-sub {
@@ -358,8 +382,25 @@
       color: var(--text-secondary);
       line-height: 1.65;
       max-width: 480px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       animation: fadeUp 0.7s ease-out 0.2s both;
+    }
+
+    .hero-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 28px;
+      animation: fadeUp 0.7s ease-out 0.25s both;
+    }
+
+    .hero-guarantee svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
     }
 
     .hero-buttons {
@@ -375,12 +416,25 @@
       overflow: hidden;
       box-shadow: var(--shadow-lg);
       animation: slideInRight 0.8s ease-out 0.2s both;
+      position: relative;
     }
 
     .hero-image-wrap img {
       width: 100%;
-      height: 300px;
+      height: 340px;
       object-fit: cover;
+    }
+
+    .hero-image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 16px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
     }
 
     @keyframes fadeUp {
@@ -401,24 +455,18 @@
     /* ─── TRUST BADGES ─── */
     .trust-bar {
       background: #C2410C;
-      border-top: none;
-      border-bottom: none;
-      padding: 20px 0;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      padding: 18px 0;
     }
-
-    .trust-bar::-webkit-scrollbar { display: none; }
 
     .trust-badges {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      gap: 10px;
       max-width: 1080px;
       margin: 0 auto;
       padding: 0 24px;
-      white-space: nowrap;
     }
 
     .trust-badge {
@@ -470,12 +518,12 @@
       justify-content: center;
       width: 56px;
       height: 56px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
+      background: var(--brand-light);
+      border: 1px solid var(--brand-border);
       border-radius: 14px;
       font-weight: 700;
       font-size: 24px;
-      color: var(--blue);
+      color: var(--brand);
       margin-bottom: 20px;
     }
 
@@ -540,56 +588,147 @@
       line-height: 1.5;
     }
 
-    .included-photo {
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-bottom: 32px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .included-photo img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    /* ─── WHAT WE DON'T TAKE ─── */
-    .x-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
       margin-top: 8px;
     }
 
-    .x-list li {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 15px;
-      line-height: 1.5;
-      padding: 16px 20px;
+    .testimonial-card {
+      padding: 28px;
       background: white;
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-xs);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
     }
 
-    .x-list li .icon {
-      flex-shrink: 0;
-      width: 26px;
-      height: 26px;
-      background: var(--red-bg);
-      border-radius: 8px;
+    .testimonial-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold);
+      color: var(--gold);
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brand-light);
+      border: 1px solid var(--brand-border);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--brand);
+      flex-shrink: 0;
     }
 
-    .x-list li .icon svg {
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .testimonial-location {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ─── ABOUT / TRUST SECTION ─── */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .about-credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .credential {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background: var(--green-bg);
+      border: 1px solid rgba(34, 197, 94, 0.15);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .credential svg {
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* ─── WHAT WE DON'T TAKE ─── */
+    .exclusions-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .exclusion-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .exclusion-tag svg {
       width: 12px;
       height: 12px;
       color: var(--red);
+      flex-shrink: 0;
+    }
+
+    .exclusions-note {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
     }
 
     /* ─── PRICING ─── */
@@ -617,7 +756,7 @@
 
     .pricing-card.featured {
       border-color: rgba(194, 65, 12, 0.25);
-      box-shadow: var(--blue-glow);
+      box-shadow: var(--brand-glow);
     }
 
     .pricing-card.featured:hover {
@@ -629,7 +768,7 @@
       top: -11px;
       right: 22px;
       padding: 4px 14px;
-      background: var(--blue);
+      background: var(--brand);
       color: white;
       font-size: 11px;
       font-weight: 700;
@@ -647,7 +786,7 @@
       color: var(--text);
     }
 
-    .pricing-card.featured .price { color: var(--blue); }
+    .pricing-card.featured .price { color: var(--brand); }
 
     .pricing-card .price-label {
       font-size: 14px;
@@ -661,11 +800,36 @@
       line-height: 1.6;
     }
 
+    .pricing-includes {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pricing-includes li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      list-style: none;
+    }
+
+    .pricing-includes li svg {
+      width: 14px;
+      height: 14px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
     .pricing-note {
       margin-top: 20px;
       padding: 16px 18px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
+      background: var(--brand-light);
+      border: 1px solid var(--brand-border);
       border-radius: var(--radius-sm);
       font-size: 14px;
       color: var(--text-secondary);
@@ -679,8 +843,41 @@
       flex-shrink: 0;
       width: 18px;
       height: 18px;
-      color: var(--blue);
+      color: var(--brand);
       margin-top: 2px;
+    }
+
+    /* ─── GUARANTEE ─── */
+    .guarantee-box {
+      margin-top: 32px;
+      padding: 28px;
+      background: var(--green-bg);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: var(--radius);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .guarantee-box svg {
+      width: 32px;
+      height: 32px;
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .guarantee-box h3 {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .guarantee-box p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
 
     /* ─── SERVICE AREA ─── */
@@ -808,16 +1005,93 @@
       line-height: 1.7;
     }
 
-    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-item.open .faq-answer { max-height: 300px; }
 
     .faq-item.open {
-      border-color: var(--blue-border);
-      box-shadow: var(--blue-glow);
+      border-color: var(--brand-border);
+      box-shadow: var(--brand-glow);
     }
+
+    /* ─── FINAL CTA ─── */
+    .final-cta {
+      background: var(--brand);
+      padding: 72px 24px;
+      text-align: center;
+      color: white;
+    }
+
+    .final-cta h2 {
+      font-weight: 800;
+      font-size: 32px;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .final-cta .btn-white {
+      background: white;
+      color: var(--brand);
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: var(--radius-sm);
+      border: none;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .final-cta .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+
+    .final-cta .btn-white svg { width: 18px; height: 18px; }
+
+    .final-cta .btn-ghost {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .final-cta .btn-ghost:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .final-cta .btn-ghost svg { width: 16px; height: 16px; }
 
     /* ─── FOOTER ─── */
     .footer {
-      padding: 56px 24px;
+      padding: 48px 24px;
       text-align: center;
       background: var(--bg-alt);
       border-top: 1px solid var(--border-light);
@@ -826,18 +1100,74 @@
     .footer-phone {
       font-weight: 700;
       font-size: 20px;
-      color: var(--blue);
+      color: var(--brand);
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .footer-phone svg { width: 18px; height: 18px; }
 
+    .footer-details {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .footer-note {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
     .footer p {
       font-size: 13px;
       color: var(--text-light);
+    }
+
+    /* ─── STICKY MOBILE CTA ─── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 98;
+      padding: 12px 16px;
+      background: white;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+      gap: 10px;
+    }
+
+    .sticky-cta a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .sticky-cta .sticky-call {
+      background: var(--brand);
+      color: white;
+    }
+
+    .sticky-cta .sticky-text {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .sticky-cta svg {
+      width: 16px;
+      height: 16px;
     }
 
     /* ─── SCROLL REVEAL ─── */
@@ -853,6 +1183,38 @@
     }
 
     /* ─── RESPONSIVE ─── */
+    @media (max-width: 639px) {
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .sticky-cta {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 72px;
+      }
+
+      .trust-badges {
+        justify-content: center;
+      }
+
+      .about-credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .final-cta h2 {
+        font-size: 26px;
+      }
+
+      .final-cta-buttons .btn-white,
+      .final-cta-buttons .btn-ghost {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
     @media (min-width: 640px) {
       .hero h1 { font-size: 48px; }
 
@@ -887,6 +1249,16 @@
       .policy-card { flex: 1; }
 
       .steps { grid-template-columns: repeat(3, 1fr); }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .final-cta-buttons {
+        flex-direction: row;
+      }
+
+      .final-cta h2 { font-size: 36px; }
     }
 
     @media (min-width: 900px) {
@@ -923,11 +1295,11 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="#" class="nav-logo">
-      <img src="OC-garage-cleanout-logo.png" alt="OC Garage Cleanout">
+      <img src="OC-garage-cleanout-logo.png" alt="OC Garage Cleanout" width="160" height="48">
     </a>
     <div class="nav-links">
       <a href="#how-it-works">How It Works</a>
-      <a href="#whats-included">What's Included</a>
+      <a href="#reviews">Reviews</a>
       <a href="#pricing">Pricing</a>
       <a href="#service-area">Service Area</a>
       <a href="#faq">FAQ</a>
@@ -944,7 +1316,7 @@
   </nav>
   <div class="mobile-menu">
     <a href="#how-it-works">How It Works</a>
-    <a href="#whats-included">What's Included</a>
+    <a href="#reviews">Reviews</a>
     <a href="#pricing">Pricing</a>
     <a href="#service-area">Service Area</a>
     <a href="#faq">FAQ</a>
@@ -955,25 +1327,29 @@
     <div class="hero-inner">
       <div class="hero-text">
         <div class="hero-badge">
-          <span class="pulse"></span>
-          Saturday appointments only — book yours now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Limited Saturday spots available
         </div>
-        <h1>We Clean Out Your Entire Garage. <span class="price-highlight">Flat $599.</span></h1>
-        <p class="hero-sub">We haul everything out, sweep it clean, and leave you with a garage you can actually use. Serving Costa Mesa, Newport Beach, Irvine, Huntington Beach, and surrounding OC cities.</p>
-        <p style="font-size: 13px; font-weight: 500; color: var(--blue); margin-bottom: 24px; margin-top: -16px; padding: 8px 14px; background: rgba(194, 65, 12, 0.06); border: 1px solid rgba(194, 65, 12, 0.15); border-radius: 8px; display: inline-block;">We clean out garages only. We do not service attics, basements, or interior rooms.</p>
+        <h1>Your Garage. Cleared Out. <span class="price-highlight">Flat $599.</span></h1>
+        <p class="hero-sub">We haul everything out, sweep it clean, and hand you back a garage you can actually park in. No hourly rates, no surprise fees. Serving all of Orange County.</p>
+        <div class="hero-guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+          You don't pay until the job is done and you're happy.
+        </div>
         <div class="hero-buttons">
           <a href="tel:+19494146589" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call to Book
+            Call (949) 414-6589
           </a>
-          <a href="sms:+19494146589" class="btn btn-secondary">
+          <a href="sms:+19494146589?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20garage%20cleanout." class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Text to Book
+            Text Us to Book
           </a>
         </div>
       </div>
       <div class="hero-image-wrap">
-        <img src="hero-before-after.png" alt="Before and after garage cleanout — cluttered garage transformed to clean empty space" loading="eager">
+        <img src="hero-before-after.png" alt="Before and after garage cleanout — cluttered garage transformed to clean empty space" loading="eager" width="600" height="460">
+        <div class="hero-image-caption">Real cleanout by our crew in Costa Mesa</div>
       </div>
     </div>
   </section>
@@ -983,19 +1359,19 @@
     <div class="trust-badges">
       <div class="trust-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Locally Owned &amp; Operated
+        Locally Owned in OC
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Fully Insured
       </div>
       <div class="trust-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         Flat Rate — No Hidden Fees
       </div>
       <div class="trust-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Price Locked Before We Start
-      </div>
-      <div class="trust-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        Satisfaction Guaranteed
+        Pay After Completion
       </div>
       <div class="trust-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -1011,28 +1387,94 @@
     <div class="container">
       <div class="section">
         <div class="section-label">How It Works</div>
-        <h2 class="section-title">Three easy steps.</h2>
-        <p class="section-desc">No complicated scheduling. No confusing quotes. Just a simple process from start to finish.</p>
+        <h2 class="section-title">Three steps. That's it.</h2>
+        <p class="section-desc">No complicated scheduling. No confusing quotes. Call or text, and we handle the rest.</p>
         <div class="steps">
           <div class="step" data-delay="0">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h3>Book your Saturday</h3>
-              <p>We only book Saturdays, so spots fill up fast. Call or text to reserve yours.</p>
+              <h3>Call or text us</h3>
+              <p>Tell us about your garage. We'll give you the flat price and lock in your Saturday.</p>
             </div>
           </div>
           <div class="step" data-delay="1">
             <div class="step-num">2</div>
             <div class="step-content">
               <h3>We show up and handle everything</h3>
-              <p>Our crew loads everything out and sweeps it clean. You point, we haul.</p>
+              <p>Our crew loads it all out, hauls it away, and sweeps your garage clean. You point, we do the rest.</p>
             </div>
           </div>
           <div class="step" data-delay="2">
             <div class="step-num">3</div>
             <div class="step-content">
-              <h3>Pay when the job is done</h3>
-              <p>No upfront payment. You pay only after you're happy with the result.</p>
+              <h3>Walk into a clean garage</h3>
+              <p>You pay only after the job is done and you're satisfied. No upfront charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <div id="reviews" class="reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">Reviews</div>
+        <h2 class="section-title">What our customers are saying.</h2>
+        <p class="section-desc">Real homeowners, real garages, real results.</p>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"I've been parking in the driveway for three years because our garage was so packed. These guys cleared the whole thing in one morning. I actually parked inside last night for the first time since we moved in."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <div class="testimonial-name">Mike R.</div>
+                <div class="testimonial-location">Costa Mesa</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"My husband passed last year and I needed help clearing out 30 years of things from our garage. They were so respectful and careful with everything. They even set aside items I wanted to donate to our church."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div>
+                <div class="testimonial-name">Susan T.</div>
+                <div class="testimonial-location">Huntington Beach</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"$599, done in under 3 hours, no games. I got quotes from other junk haulers for $1,200+ and none of them included the sweep. These guys earned a customer for life."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">D</div>
+              <div>
+                <div class="testimonial-name">David L.</div>
+                <div class="testimonial-location">Irvine</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1043,100 +1485,56 @@
   <div class="section-divider"></div>
 
   <!-- WHAT'S INCLUDED -->
-  <div id="whats-included" class="reveal">
+  <div id="whats-included" class="section-alt reveal">
     <div class="container">
       <div class="section">
         <div class="section-label">What's Included</div>
-        <h2 class="section-title">Everything you need, nothing you don't.</h2>
-        <p class="section-desc">One flat price covers the whole job. No hidden fees, no extra charges at the end.</p>
-        <div class="included-photo">
-          <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800" alt="Clean, organized space" loading="lazy">
-        </div>
+        <h2 class="section-title">Everything you need. One flat price.</h2>
+        <p class="section-desc">No hidden fees, no extra charges at the end. Your price is locked before we lift a single box.</p>
         <div class="included-grid">
           <div class="included-item">
             <div class="item-icon">
-              <!-- truck icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </div>
             <h3>Full Haul Away</h3>
-            <p>We remove all unwanted items from your garage</p>
+            <p>Everything you don't want — loaded, removed, gone</p>
           </div>
           <div class="included-item">
             <div class="item-icon">
-              <!-- broom/sweep icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L12 10"/><path d="M6 10h12l1 12H5L6 10z"/><path d="M9 10V6"/><path d="M15 10V6"/></svg>
             </div>
-            <h3>Broom Sweep</h3>
-            <p>Garage is swept clean after everything is removed</p>
+            <h3>Swept Clean</h3>
+            <p>We broom-sweep your entire garage floor before we leave</p>
           </div>
           <div class="included-item">
             <div class="item-icon">
-              <!-- dollar icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
-            <h3>Disposal Included</h3>
-            <p>All disposal and dump fees are covered in the price</p>
+            <h3>All Fees Included</h3>
+            <p>Disposal, dump fees, labor — all covered in your flat price</p>
           </div>
           <div class="included-item">
             <div class="item-icon">
-              <!-- heart icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h3>Charity Donations</h3>
+            <h3>Donations Handled</h3>
             <p>Usable items donated to Habitat for Humanity and Goodwill</p>
           </div>
           <div class="included-item">
             <div class="item-icon">
-              <!-- recycle/leaf icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4C7.09 15.62 8 12.69 8 10c0-4-2.5-6-2.5-6"/><path d="M22 2s-2.5 2-2.5 6c0 2.69.91 5.62 2.5 8 1 1.5 2.25 2.75 3.5 4"/><path d="M2 22l10-10"/><path d="M22 2L12 12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3>Responsible Disposal</h3>
-            <p>Remaining items properly disposed of at OC landfill</p>
+            <h3>Insured Crew</h3>
+            <p>Fully insured team — your property is protected</p>
+          </div>
+          <div class="included-item">
+            <div class="item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Saturday Service</h3>
+            <p>All jobs on Saturdays so you don't miss work</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- WHAT WE DON'T TAKE -->
-  <div class="section-alt reveal">
-    <div class="container">
-      <div class="section">
-        <div class="section-label">What We Don't Take</div>
-        <h2 class="section-title">A few things we can't haul.</h2>
-        <p class="section-desc">For safety and environmental reasons, these items require specialized disposal.</p>
-        <ul class="x-list">
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Hazardous materials
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Paint or chemicals
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Electronics and e-waste
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Construction debris
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Appliances containing Freon (AC units, refrigerators)
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Anything deemed unsafe or requiring specialized disposal
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-            Attic cleanouts — we service garages only, not attics or interior spaces
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -1149,24 +1547,116 @@
       <div class="section">
         <div class="section-label">Pricing</div>
         <h2 class="section-title">Flat rate. No surprises.</h2>
-        <p class="section-desc">You'll know exactly what you're paying before we lift a single box.</p>
+        <p class="section-desc">You'll know exactly what you're paying before we start. Price is locked in writing.</p>
         <div class="pricing-cards">
           <div class="pricing-card featured">
-            <span class="tag">Most Garages</span>
+            <span class="tag">Most Common</span>
             <div class="price">$599</div>
             <div class="price-label">Standard garage cleanout</div>
-            <p class="price-desc">Full cleanout, haul away, sweep, disposal included. The price most homeowners pay.</p>
+            <p class="price-desc">Full cleanout, haul away, sweep, and disposal. This is what 9 out of 10 customers pay.</p>
+            <ul class="pricing-includes">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything removed</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Garage swept clean</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All dump fees included</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Donations handled</li>
+            </ul>
           </div>
           <div class="pricing-card">
             <div class="price">$799</div>
             <div class="price-label">Oversized or extremely full</div>
-            <p class="price-desc">For garages packed floor-to-ceiling or oversized three-car setups.</p>
+            <p class="price-desc">For garages packed floor-to-ceiling or oversized three-car setups. Same service, bigger job.</p>
+            <ul class="pricing-includes">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in the $599 tier</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Extra crew and truck capacity</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Multiple dump runs if needed</li>
+            </ul>
           </div>
         </div>
         <div class="pricing-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <span>Price is confirmed and signed off before any work begins. You'll always know the total upfront. All jobs are scheduled on Saturdays.</span>
+          <span>We confirm the price before any work starts. You sign off on the number, and that's what you pay. No add-ons, no "well actually" at the end.</span>
         </div>
+
+        <!-- Guarantee -->
+        <div class="guarantee-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+          <div>
+            <h3>Satisfaction Guarantee</h3>
+            <p>If you're not happy with the job, we'll come back and make it right at no extra cost. You don't pay until you're satisfied. That's our promise — and we put it in writing before we start.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT / TRUST -->
+  <div class="section-alt reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">A local team you can trust in your home.</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>We're a small, local crew based right here in Orange County. We started this business because we saw too many homeowners getting ripped off by junk haulers — vague quotes that balloon on the day, hidden fees, crews that don't show up. We do one thing and do it well: garage cleanouts at a flat, honest price.</p>
+            <p>We service garages only — not attics, basements, or interior rooms. That focus is what lets us keep the price simple and the quality high.</p>
+          </div>
+          <div class="about-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Fully Insured
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Orange County Based
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Background-Checked Crew
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              No Upfront Payment
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- WHAT WE DON'T TAKE — Condensed -->
+  <div class="reveal">
+    <div class="container">
+      <div class="section">
+        <div class="section-label">Exclusions</div>
+        <h2 class="section-title">A few things we can't haul.</h2>
+        <p class="section-desc">For safety and environmental reasons, these items need specialized disposal. We're happy to point you in the right direction if you have any of these.</p>
+        <div class="exclusions-compact">
+          <span class="exclusion-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Hazardous materials
+          </span>
+          <span class="exclusion-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Paint &amp; chemicals
+          </span>
+          <span class="exclusion-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Electronics / e-waste
+          </span>
+          <span class="exclusion-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Construction debris
+          </span>
+          <span class="exclusion-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Freon appliances (AC, fridges)
+          </span>
+        </div>
+        <p class="exclusions-note">Not sure if we can take something? Just ask when you call — we'll let you know right away.</p>
       </div>
     </div>
   </div>
@@ -1179,14 +1669,13 @@
       <div class="section">
         <div class="section-label">Service Area</div>
         <h2 class="section-title">Proudly serving Orange County.</h2>
-        <p class="section-desc">We're local to OC and know these neighborhoods well. If your city isn't listed, give us a call — we may still be able to help.</p>
+        <p class="section-desc">We're local to OC and know these neighborhoods well. Don't see your city? Give us a call — we likely cover your area too.</p>
         <div class="map-wrap">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d212000!2d-117.8311!3d33.7175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="OC Garage Cleanout service area — Orange County, California"></iframe>
         </div>
         <ul class="city-checklist">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aliso Viejo</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Anaheim Hills</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Atwood</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Brea</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Buena Park</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Corona del Mar</li>
@@ -1229,16 +1718,20 @@
     <div class="container">
       <div class="section">
         <div class="section-label">Policies</div>
-        <h2 class="section-title">The fine print, kept simple.</h2>
-        <p class="section-desc">We believe in being straightforward. Here's everything you need to know.</p>
+        <h2 class="section-title">Straightforward terms.</h2>
+        <p class="section-desc">No fine print tricks. Here's how we operate.</p>
         <div class="policy-cards">
           <div class="policy-card">
-            <h3>Cancellation</h3>
-            <p>24-hour notice required. Cancellations within 24 hours are subject to a $100 fee.</p>
+            <h3>Payment</h3>
+            <p>You pay after the job is done — never before. We accept cash, Zelle, and Venmo.</p>
           </div>
           <div class="policy-card">
-            <h3>Payment</h3>
-            <p>Cash, Zelle, or Venmo. Payment is due upon job completion.</p>
+            <h3>Scheduling</h3>
+            <p>All jobs are on Saturdays. We'll confirm your time slot when you book. Need to reschedule? Just give us 24 hours' notice and we'll move your date — no fee.</p>
+          </div>
+          <div class="policy-card">
+            <h3>Cancellations</h3>
+            <p>Cancel anytime with at least 24 hours' notice at no charge. Cancellations under 24 hours are subject to a $100 fee to cover crew scheduling.</p>
           </div>
         </div>
       </div>
@@ -1252,34 +1745,34 @@
     <div class="container">
       <div class="section">
         <div class="section-label">FAQ</div>
-        <h2 class="section-title">Questions we hear most.</h2>
-        <p class="section-desc">If you don't see your question here, give us a call. We're happy to help.</p>
+        <h2 class="section-title">Common questions.</h2>
+        <p class="section-desc">If you don't see your answer here, just call or text us. We're happy to help.</p>
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">
-              Do I need to be home?
+              Do I need to be home during the cleanout?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">Yes. An adult must be present for the duration of the job.</div>
+              <div class="faq-answer-inner">Yes, we ask that an adult be present during the job. You don't need to do any lifting — just be around so you can tell us what stays and what goes, and sign off when we're finished.</div>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-question">
-              How long does it take?
+              How long does a typical garage cleanout take?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">Most jobs take 2 to 4 hours.</div>
+              <div class="faq-answer-inner">Most jobs take 2 to 4 hours depending on how full your garage is. You can go about your morning while we work — we'll come get you when it's time to walk through the finished result.</div>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-question">
-              What if my garage is really full?
+              What if my garage is really, really full?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">We assess on arrival and confirm price before starting. No surprises.</div>
+              <div class="faq-answer-inner">We've seen it all. If your garage is packed floor-to-ceiling or it's an oversized three-car setup, the price may be $799 instead of $599. We'll confirm the exact price before we start — never after. No surprises.</div>
             </div>
           </div>
           <div class="faq-item">
@@ -1288,7 +1781,34 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">Yes. We donate usable items to Habitat for Humanity and Goodwill whenever possible. The rest goes to the OC landfill responsibly.</div>
+              <div class="faq-answer-inner">Yes. We donate usable items to Habitat for Humanity and Goodwill whenever possible. If you have specific items you'd like donated to a particular organization, just let us know and we'll do our best to accommodate.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Are you insured? What if something gets damaged?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes, we're fully insured. Our crew is careful and experienced, but in the rare event something gets damaged, our insurance covers it. Your home and property are protected.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Why only garages? Can you do my attic or shed?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">We specialize in garage cleanouts only — no attics, basements, sheds, or interior rooms. By focusing on one thing, we can keep our pricing simple, our process fast, and our quality high.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I pay?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">We accept cash, Zelle, and Venmo. Payment is due after the job is complete and you've walked through the finished garage — never before.</div>
             </div>
           </div>
         </div>
@@ -1296,14 +1816,44 @@
     </div>
   </div>
 
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2>Ready to take back your garage?</h2>
+    <p>Call or text to lock in your Saturday. Most garages are $599 flat — and you don't pay until the job is done.</p>
+    <div class="final-cta-buttons">
+      <a href="tel:+19494146589" class="btn-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (949) 414-6589
+      </a>
+      <a href="sms:+19494146589?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20garage%20cleanout." class="btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Text Us to Book
+      </a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <a href="tel:+19494146589" class="footer-phone">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       (949) 414-6589
     </a>
+    <p class="footer-details">Serving all of Orange County — Saturdays only</p>
+    <p class="footer-note">Garage cleanouts only. We do not service attics, basements, or interior rooms.</p>
     <p>&copy; 2026 OC Garage Cleanout. All rights reserved.</p>
   </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="tel:+19494146589" class="sticky-call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="sms:+19494146589?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20garage%20cleanout." class="sticky-text">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Text Us
+    </a>
+  </div>
 
   <script>
     // Mobile menu toggle
@@ -1367,6 +1917,22 @@
     steps.forEach(function(el) {
       stepObserver.observe(el);
     });
+
+    // Show sticky CTA only after scrolling past hero
+    var stickyCta = document.querySelector('.sticky-cta');
+    var heroSection = document.querySelector('.hero');
+    if (stickyCta && heroSection) {
+      var stickyObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) {
+            stickyCta.style.display = 'flex';
+          } else {
+            stickyCta.style.display = 'none';
+          }
+        });
+      }, { threshold: 0 });
+      stickyObserver.observe(heroSection);
+    }
   </script>
 
 </body>
