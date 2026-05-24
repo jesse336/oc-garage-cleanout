@@ -424,30 +424,15 @@
       color: var(--text-light);
     }
 
-    /* ── Hero trust row ── */
-    .hero-trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 36px;
+    /* ── Guarantee line ── */
+    .hero-guarantee {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 28px;
       opacity: 0;
       animation: fadeUp 0.7s ease-out 0.4s forwards;
-    }
-
-    .hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-
-    .hero-trust-item svg {
-      width: 14px;
-      height: 14px;
-      color: var(--brand);
-      flex-shrink: 0;
     }
 
     /* ── CTA buttons ── */
@@ -513,6 +498,27 @@
 
     .hero-cta-secondary svg { width: 16px; height: 16px; }
 
+    /* ── Hero pill badges ── */
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease-out 0.55s forwards;
+    }
+
+    .hero-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f0ece6;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+    }
+
     /* ── Hero image ── */
     .hero-image-section {
       flex: 1;
@@ -574,45 +580,6 @@
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── TRUST BAR ─── */
-    .trust-bar {
-      background: var(--brand);
-      padding: 16px 0;
-    }
-
-    .trust-badges {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .trust-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 14px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: white;
-      flex-shrink: 0;
-      letter-spacing: 0.01em;
-    }
-
-    .trust-badge svg {
-      width: 13px;
-      height: 13px;
-      color: white;
-      flex-shrink: 0;
     }
 
     /* ─── HOW IT WORKS ─── */
@@ -713,78 +680,6 @@
       font-size: 13px;
       color: var(--text-secondary);
       line-height: 1.5;
-    }
-
-    /* ─── TESTIMONIALS ─── */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      margin-top: 8px;
-    }
-
-    .testimonial-card {
-      padding: 28px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .testimonial-stars {
-      display: flex;
-      gap: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-stars svg {
-      width: 16px;
-      height: 16px;
-      fill: var(--gold);
-      color: var(--gold);
-    }
-
-    .testimonial-text {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 20px;
-    }
-
-    .testimonial-text::before { content: '\201C'; }
-    .testimonial-text::after { content: '\201D'; }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .testimonial-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--bg-warm);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--brand);
-      flex-shrink: 0;
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--text);
-    }
-
-    .testimonial-location {
-      font-size: 13px;
-      color: var(--text-light);
     }
 
     /* ─── ABOUT / TRUST ─── */
@@ -1400,10 +1295,6 @@
 
       .steps { grid-template-columns: repeat(3, 1fr); }
 
-      .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
       .final-cta-buttons {
         flex-direction: row;
       }
@@ -1465,7 +1356,6 @@
     </a>
     <div class="nav-links">
       <a href="#how-it-works">How It Works</a>
-      <a href="#reviews">Reviews</a>
       <a href="#pricing">Pricing</a>
       <a href="#service-area">Service Area</a>
       <a href="#faq">FAQ</a>
@@ -1482,7 +1372,6 @@
   </nav>
   <div class="mobile-menu">
     <a href="#how-it-works">How It Works</a>
-    <a href="#reviews">Reviews</a>
     <a href="#pricing">Pricing</a>
     <a href="#service-area">Service Area</a>
     <a href="#faq">FAQ</a>
@@ -1511,16 +1400,7 @@
           </div>
         </div>
 
-        <div class="hero-trust">
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Locally owned
-          </div>
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Pay after completion
-          </div>
-        </div>
+        <p class="hero-guarantee">You don't pay until you're satisfied. That's our promise &mdash; and we put it in writing before we start.</p>
 
         <div class="hero-cta">
           <a href="tel:+19494146589" class="hero-cta-primary">
@@ -1531,6 +1411,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             Text Us
           </a>
+        </div>
+
+        <div class="hero-pills">
+          <span class="hero-pill">Locally Owned in OC</span>
+          <span class="hero-pill">Saturday Bookings Only</span>
+          <span class="hero-pill">Flat Rate &mdash; No Hidden Fees</span>
+          <span class="hero-pill">Pay After Completion</span>
+          <span class="hero-pill">Donations Handled</span>
         </div>
       </div>
 
@@ -1546,28 +1434,6 @@
     </div>
     <div class="hero-bottom-edge"></div>
   </section>
-
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-badges">
-      <div class="trust-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Locally Owned in OC
-      </div>
-      <div class="trust-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Flat Rate &mdash; No Hidden Fees
-      </div>
-      <div class="trust-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        Pay After Completion
-      </div>
-      <div class="trust-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        Donations Handled
-      </div>
-    </div>
-  </div>
 
   <!-- HOW IT WORKS -->
   <div id="how-it-works" class="reveal">
@@ -1602,74 +1468,6 @@
       </div>
     </div>
   </div>
-
-  <div class="section-divider"></div>
-
-  <!-- TESTIMONIALS -->
-  <div id="reviews" class="section-alt reveal">
-    <div class="container">
-      <div class="section">
-        <div class="section-label">Reviews</div>
-        <h2 class="section-title">What our customers are saying.</h2>
-        <p class="section-desc">Real homeowners, real garages, real results.</p>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">I've been parking in the driveway for three years because our garage was so packed. These guys cleared the whole thing in one morning. I actually parked inside last night for the first time since we moved in.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">M</div>
-              <div>
-                <div class="testimonial-name">Mike R.</div>
-                <div class="testimonial-location">Costa Mesa</div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">My husband passed last year and I needed help clearing out 30 years of things from our garage. They were so respectful and careful with everything. They even set aside items I wanted to donate to our church.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">S</div>
-              <div>
-                <div class="testimonial-name">Susan T.</div>
-                <div class="testimonial-location">Huntington Beach</div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">$599, done in under 3 hours, no games. I got quotes from other junk haulers for $1,200+ and none of them included the sweep. These guys earned a customer for life.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">D</div>
-              <div>
-                <div class="testimonial-name">David L.</div>
-                <div class="testimonial-location">Irvine</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
 
   <!-- WHAT'S INCLUDED -->
   <div id="whats-included" class="reveal">
