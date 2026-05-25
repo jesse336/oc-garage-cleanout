@@ -583,6 +583,42 @@
       border-radius: 0 0 0 10px;
     }
 
+    /* ── Hero split before/after ── */
+    .hero-split {
+      display: flex;
+      gap: 0;
+    }
+
+    .hero-split-half {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-split-half img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-split .hero-image-label-side {
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
+
+    .hero-split .hero-image-label-side.before {
+      left: 0;
+      border-radius: 0 0 10px 0;
+    }
+
+    .hero-split .hero-image-label-side.after {
+      right: 0;
+      left: auto;
+      border-radius: 0 0 0 10px;
+    }
+
     /* ── Bottom edge ── */
     .hero-bottom-edge {
       position: absolute;
@@ -1658,11 +1694,14 @@
       </div>
 
       <div class="hero-image-section">
-        <div class="hero-image-frame">
-          <img src="hero-before-after.png" alt="Before and after garage cleanout — cluttered garage transformed to clean, empty space" loading="eager" width="600" height="460">
-          <div class="hero-image-label">
+        <div class="hero-image-frame hero-split">
+          <div class="hero-split-half">
             <span class="hero-image-label-side before">Before</span>
+            <img src="before-garage.jpg" alt="Cluttered garage before cleanout" loading="eager">
+          </div>
+          <div class="hero-split-half">
             <span class="hero-image-label-side after">After</span>
+            <img src="after-garage.jpg" alt="Clean garage after cleanout" loading="eager">
           </div>
         </div>
       </div>
@@ -1679,9 +1718,9 @@
         <div class="section-label">How It Works</div>
         <h2 class="section-title">Three steps. That's it.</h2>
         <p class="section-desc">No complicated scheduling. No confusing quotes. Call or text, and we handle the rest.</p>
-        <!-- IMAGE: how-it-works-photo.jpg
-             Prompt: "Two men in work clothes loading boxes and furniture from a residential garage into the back of a white pickup truck, sunny Southern California suburban neighborhood, warm natural lighting, shot from the driveway looking into an open garage, casual and authentic feel, not overly staged" -->
-        <div class="section-photo">how-it-works-photo.jpg</div>
+        <div class="section-photo">
+          <img src="before-garage.jpg" alt="Cluttered garage packed with boxes, furniture, and household items — before cleanout" loading="lazy">
+        </div>
         <div class="steps">
           <div class="step" data-delay="0">
             <div class="step-num">1</div>
@@ -2050,9 +2089,9 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="final-cta-layout">
-      <!-- IMAGE: cta-clean-garage.jpg
-           Prompt: "A perfectly clean empty two-car garage interior, concrete floor swept clean, bright natural daylight streaming in through the open garage door, minimal and satisfying, no cars or items inside, residential Orange County home style" -->
-      <div class="final-cta-image">cta-clean-garage.jpg</div>
+      <div class="final-cta-image">
+        <img src="after-garage.jpg" alt="Clean organized garage after cleanout — open floor space, neatly arranged" loading="lazy">
+      </div>
       <div class="final-cta-content">
         <h2>Ready to take back your garage?</h2>
         <p>Call or text to lock in your Saturday. Most garages are $599 flat &mdash; and you don't pay until the job is done.</p>
