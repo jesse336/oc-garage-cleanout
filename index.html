@@ -599,6 +599,130 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ─── SECTION PHOTO PLACEHOLDERS ─── */
+    .section-photo {
+      width: 100%;
+      height: 280px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 32px;
+      background: #eee9e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .section-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* About two-column layout */
+    .about-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .about-layout-text { flex: 1; }
+
+    .about-layout-image {
+      flex: 1;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #eee9e2;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .about-layout-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Final CTA two-column layout */
+    .final-cta-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .final-cta-image {
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(255,255,255,0.1);
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .final-cta-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .final-cta-content {
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      .section-photo {
+        height: 360px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .about-layout {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .about-layout-image {
+        min-height: 340px;
+      }
+
+      .final-cta-layout {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .final-cta-image {
+        flex: 1;
+        min-height: 320px;
+      }
+
+      .final-cta-content {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .final-cta-content .final-cta-buttons {
+        justify-content: flex-start;
+      }
+    }
+
     /* ─── HOW IT WORKS ─── */
     .steps {
       display: grid;
@@ -1555,6 +1679,9 @@
         <div class="section-label">How It Works</div>
         <h2 class="section-title">Three steps. That's it.</h2>
         <p class="section-desc">No complicated scheduling. No confusing quotes. Call or text, and we handle the rest.</p>
+        <!-- IMAGE: how-it-works-photo.jpg
+             Prompt: "Two men in work clothes loading boxes and furniture from a residential garage into the back of a white pickup truck, sunny Southern California suburban neighborhood, warm natural lighting, shot from the driveway looking into an open garage, casual and authentic feel, not overly staged" -->
+        <div class="section-photo">how-it-works-photo.jpg</div>
         <div class="steps">
           <div class="step" data-delay="0">
             <div class="step-num">1</div>
@@ -1698,11 +1825,16 @@
       <div class="section">
         <div class="section-label">About Us</div>
         <h2 class="section-title">A local team you can trust in your home.</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>We're a small, local crew based right here in Orange County. We started this business because we saw too many homeowners getting vague quotes from hauling companies &mdash; prices that balloon on the day, hidden fees, crews that don't show up. We do one thing and do it well: garage cleanouts at a flat, honest price.</p>
-            <p>We service garages only &mdash; not attics, basements, or interior rooms. That focus is what lets us keep the price simple and the quality high.</p>
+        <div class="about-layout">
+          <div class="about-layout-text">
+            <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 12px;">We're a small, local crew based right here in Orange County. We started this business because we saw too many homeowners getting vague quotes from hauling companies &mdash; prices that balloon on the day, hidden fees, crews that don't show up. We do one thing and do it well: garage cleanouts at a flat, honest price.</p>
+            <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 12px;">We service garages only &mdash; not attics, basements, or interior rooms. That focus is what lets us keep the price simple and the quality high.</p>
           </div>
+          <!-- IMAGE: about-us-photo.jpg
+               Prompt: "Two men standing in front of a clean empty garage, one holding a broom, both smiling casually, wearing simple work shirts, Southern California residential street in the background, golden hour lighting, authentic and approachable, not corporate" -->
+          <div class="about-layout-image">about-us-photo.jpg</div>
+        </div>
+        <div class="about-content">
           <div class="about-credentials">
             <div class="credential">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1922,17 +2054,24 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta">
-    <h2>Ready to take back your garage?</h2>
-    <p>Call or text to lock in your Saturday. Most garages are $599 flat &mdash; and you don't pay until the job is done.</p>
-    <div class="final-cta-buttons">
-      <a href="tel:+19494146589" class="btn-white">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call (949) 414-6589
-      </a>
-      <a href="sms:+19494146589?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20garage%20cleanout." class="btn-ghost">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Text Us to Book
-      </a>
+    <div class="final-cta-layout">
+      <!-- IMAGE: cta-clean-garage.jpg
+           Prompt: "A perfectly clean empty two-car garage interior, concrete floor swept clean, bright natural daylight streaming in through the open garage door, minimal and satisfying, no cars or items inside, residential Orange County home style" -->
+      <div class="final-cta-image">cta-clean-garage.jpg</div>
+      <div class="final-cta-content">
+        <h2>Ready to take back your garage?</h2>
+        <p>Call or text to lock in your Saturday. Most garages are $599 flat &mdash; and you don't pay until the job is done.</p>
+        <div class="final-cta-buttons">
+          <a href="tel:+19494146589" class="btn-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (949) 414-6589
+          </a>
+          <a href="sms:+19494146589?body=Hi%2C%20I%27d%20like%20to%20schedule%20a%20garage%20cleanout." class="btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Text Us to Book
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
