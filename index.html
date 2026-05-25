@@ -2177,10 +2177,6 @@
       to { opacity: 0; transform: translateY(8px); pointer-events: none; }
     }
 
-    /* Push bubble up when sticky CTA visible */
-    @media (max-width: 639px) {
-      .cw-bubble { bottom: 148px; }
-    }
 
     .cw-panel {
       display: none;
@@ -2327,7 +2323,7 @@
       border-radius: 10px;
       padding: 10px 14px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       outline: none;
       color: #1a1410;
       transition: border-color 0.2s;
@@ -2351,19 +2347,30 @@
     .cw-send:disabled { background: #ddd; cursor: default; }
     .cw-send svg { width: 16px; height: 16px; color: white; }
 
-    /* Mobile chat — account for sticky CTA bar */
+    /* Mobile chat — account for sticky CTA bar (~62px tall) */
     @media (max-width: 639px) {
       .cw-toggle {
-        bottom: 84px;
-        right: 16px;
+        bottom: 72px;
+        right: 12px;
+        width: 48px;
+        height: 48px;
+      }
+      .cw-toggle svg {
+        width: 22px;
+        height: 22px;
       }
       .cw-panel {
-        width: calc(100vw - 16px);
-        height: calc(100vh - 160px);
-        bottom: 84px;
-        right: 8px;
-        border-radius: 14px;
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 62px);
+        bottom: 62px;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid var(--border);
       }
+      .cw-bubble { display: none !important; }
     }
   </style>
 
