@@ -2351,24 +2351,19 @@
     .cw-send:disabled { background: #ddd; cursor: default; }
     .cw-send svg { width: 16px; height: 16px; color: white; }
 
-    @media (max-width: 480px) {
+    /* Mobile chat — account for sticky CTA bar */
+    @media (max-width: 639px) {
+      .cw-toggle {
+        bottom: 84px;
+        right: 16px;
+      }
       .cw-panel {
         width: calc(100vw - 16px);
-        height: calc(100vh - 120px);
-        bottom: 80px;
+        height: calc(100vh - 160px);
+        bottom: 84px;
         right: 8px;
         border-radius: 14px;
       }
-      .cw-toggle {
-        bottom: 16px;
-        right: 16px;
-      }
-    }
-
-    /* Push chat toggle up when sticky CTA is visible on mobile */
-    @media (max-width: 639px) {
-      .cw-toggle { bottom: 84px; }
-      .cw-panel { bottom: 148px; }
     }
   </style>
 
