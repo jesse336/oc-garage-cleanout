@@ -2091,6 +2091,30 @@
       border-bottom-left-radius: 4px;
     }
 
+    .cw-quickreplies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-self: flex-start;
+    }
+    .cw-quick {
+      display: inline-block;
+      padding: 8px 14px;
+      background: white;
+      border: 1px solid #e5e0d8;
+      border-radius: 100px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #C2410C;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .cw-quick:hover {
+      background: rgba(194, 65, 12, 0.06);
+      border-color: rgba(194, 65, 12, 0.3);
+    }
+
     .cw-input-row {
       display: flex;
       align-items: center;
@@ -2203,6 +2227,34 @@
       return div;
     }
 
+    var quickQuestions = [
+      'How much does it cost?',
+      'How do I book?',
+      'What do you take?',
+      'What areas do you serve?',
+      'How long does it take?'
+    ];
+
+    function showQuickReplies() {
+      var wrap = document.createElement('div');
+      wrap.className = 'cw-quickreplies';
+      wrap.id = 'cwQuickReplies';
+      quickQuestions.forEach(function(q) {
+        var btn = document.createElement('button');
+        btn.className = 'cw-quick';
+        btn.textContent = q;
+        btn.addEventListener('click', function() {
+          var qr = document.getElementById('cwQuickReplies');
+          if (qr) qr.remove();
+          input.value = q;
+          sendMessage();
+        });
+        wrap.appendChild(btn);
+      });
+      messagesEl.appendChild(wrap);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
     function openChat() {
       panel.classList.add('open');
       toggle.style.display = 'none';
@@ -2210,6 +2262,7 @@
       if (!hasOpened) {
         hasOpened = true;
         addMessage('assistant', "Hi! I'm here to answer any questions about our garage cleanout service. What can I help you with?");
+        showQuickReplies();
       }
       setTimeout(function() { input.focus(); }, 100);
     }
