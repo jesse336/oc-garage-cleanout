@@ -1934,6 +1934,48 @@
     }
     .cw-toggle svg { width: 26px; height: 26px; color: white; }
 
+    .cw-bubble {
+      position: fixed;
+      bottom: 88px;
+      right: 24px;
+      z-index: 199;
+      background: white;
+      color: #1a1410;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(26,20,16,0.12), 0 0 0 1px rgba(26,20,16,0.06);
+      cursor: pointer;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: cwBubbleIn 0.4s ease-out 1.5s forwards;
+    }
+    .cw-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      right: 22px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      box-shadow: 2px 2px 4px rgba(26,20,16,0.06);
+    }
+    .cw-bubble.hidden { display: none; }
+    @keyframes cwBubbleIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Push bubble up when sticky CTA visible */
+    @media (max-width: 639px) {
+      .cw-bubble { bottom: 148px; }
+    }
+
     .cw-panel {
       display: none;
       position: fixed;
@@ -2096,6 +2138,9 @@
     }
   </style>
 
+  <!-- Chat bubble hint -->
+  <div class="cw-bubble" id="cwBubble">Questions? Chat with us!</div>
+
   <!-- Chat toggle button -->
   <button class="cw-toggle" id="cwToggle" aria-label="Open chat">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -2132,6 +2177,7 @@
     var input = document.getElementById('cwInput');
     var sendBtn = document.getElementById('cwSend');
     var messagesEl = document.getElementById('cwMessages');
+    var bubble = document.getElementById('cwBubble');
     var history = [];
     var hasOpened = false;
 
@@ -2147,6 +2193,7 @@
     function openChat() {
       panel.classList.add('open');
       toggle.style.display = 'none';
+      bubble.classList.add('hidden');
       if (!hasOpened) {
         hasOpened = true;
         addMessage('assistant', "Hi! I'm here to answer any questions about our garage cleanout service. What can I help you with?");
@@ -2160,6 +2207,7 @@
     }
 
     toggle.addEventListener('click', openChat);
+    bubble.addEventListener('click', openChat);
     closeBtn.addEventListener('click', closeChat);
 
     async function sendMessage() {
