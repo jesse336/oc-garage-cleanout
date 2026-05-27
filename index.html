@@ -20,7 +20,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-  <!-- Meta Pixel — UNCOMMENT the two lines below and replace INSERT_PIXEL_ID_HERE with your Facebook Pixel ID -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPHM2KV7YG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPHM2KV7YG');
+  </script>
+
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -2452,6 +2461,17 @@
       }
     });
   })();
+  </script>
+
+  <!-- Meta Pixel: fire Lead event on call/text clicks -->
+  <script>
+    document.querySelectorAll('a[href^="tel:"], a[href^="sms:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      });
+    });
   </script>
 
 </body>
