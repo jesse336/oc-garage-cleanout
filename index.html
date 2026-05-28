@@ -1140,7 +1140,7 @@
       line-height: 1.7;
     }
 
-    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-item.open .faq-answer { max-height: 520px; }
 
     .faq-item.open {
       border-color: var(--brand-border);
@@ -1485,6 +1485,256 @@
 
       .step { padding: 40px 32px; }
     }
+
+    /* ════════════════════════════════════════
+       v2 ENHANCEMENTS — legibility for 45+,
+       trust band, founders, new-business framing
+       ════════════════════════════════════════ */
+
+    /* ── Legibility bumps (45+ audience) ── */
+    body { font-size: 17px; }
+    .hero-sub { font-size: 18px; line-height: 1.65; }
+    .section-desc { font-size: 18px; }
+    .step-content p { font-size: 16px; }
+    .included-item h3 { font-size: 16px; }
+    .included-item p { font-size: 15px; }
+    .pricing-card .price-desc { font-size: 15px; }
+    .pricing-includes li { font-size: 15px; }
+    .faq-question { font-size: 17px; }
+    .faq-answer-inner { font-size: 16px; line-height: 1.75; }
+    .about-text p { font-size: 18px; line-height: 1.8; }
+    .policy-card p { font-size: 15px; }
+    .city-checklist li { font-size: 15px; }
+    .credential { font-size: 15px; }
+    .nav-links a { font-size: 15px; }
+
+    /* ── New-business honesty ribbon ── */
+    .newbiz-ribbon {
+      background: var(--dark);
+      color: #f5f0eb;
+      text-align: center;
+      padding: 13px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .newbiz-ribbon strong { color: #fff; font-weight: 700; }
+    .newbiz-ribbon .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #4ade80; flex-shrink: 0;
+      box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+      animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot {
+      0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+      100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+    }
+
+    /* ── Risk-reversal trust band ── */
+    .trustband {
+      background: var(--dark);
+      color: #fff;
+      padding: 44px 24px;
+    }
+    .trustband-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .trustband-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .trustband-icon {
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trustband-icon svg { width: 22px; height: 22px; color: #fbbf6b; }
+    .trustband-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+    .trustband-item p {
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.66);
+      line-height: 1.55;
+    }
+
+    /* ── Founders centerpiece ── */
+    .founders {
+      background: var(--bg-warm);
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .founders-photos {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+    .founder-photo-card {
+      flex: 1;
+      max-width: 230px;
+      text-align: center;
+    }
+    .founder-photo-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 14px;
+      background: #f0ece6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .founder-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .founder-photo-card .team-name {
+      font-weight: 700; font-size: 17px; color: var(--text); margin-bottom: 2px;
+    }
+    .founder-photo-card .team-title {
+      font-size: 14px; color: var(--brand); font-weight: 600;
+    }
+    .founders-promise {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 30px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .founders-promise .quote-mark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 64px;
+      line-height: 0.6;
+      color: var(--brand);
+      opacity: 0.18;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .founders-promise p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .founders-promise p strong { color: var(--brand); }
+    .founders-sign {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--text);
+    }
+    .founders-sign span {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* ── Value anchor (price vs. volume haulers) ── */
+    .price-anchor {
+      margin-top: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .price-anchor-row {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .price-anchor-side {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .price-anchor-side .pa-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+    }
+    .price-anchor-side .pa-amount {
+      font-family: 'DM Serif Display', serif;
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--text-secondary);
+    }
+    .price-anchor-side .pa-note {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    .price-anchor-side.them {
+      background: var(--bg-warm);
+    }
+    .price-anchor-side.them .pa-amount {
+      text-decoration: line-through;
+      text-decoration-color: var(--red);
+      text-decoration-thickness: 2px;
+    }
+    .price-anchor-side.us {
+      border-top: 1px solid var(--border);
+    }
+    .price-anchor-side.us .pa-label { color: var(--brand); }
+    .price-anchor-side.us .pa-amount { color: var(--brand); }
+    .price-anchor-side.us .pa-note { color: var(--text-secondary); }
+    .price-anchor-kicker {
+      padding: 16px 24px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    @media (min-width: 640px) {
+      .trustband-inner { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+      .trustband-item { flex-direction: column; }
+      .hero-image-frame img { height: 360px; }
+      .price-anchor-row { grid-template-columns: 1fr 1fr; }
+      .price-anchor-side.us {
+        border-top: none;
+        border-left: 1px solid var(--border);
+      }
+      .price-anchor-side .pa-amount { font-size: 34px; }
+    }
+    @media (min-width: 900px) {
+      .founders-grid { grid-template-columns: 0.85fr 1.15fr; gap: 48px; }
+      .founders-photos { justify-content: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -1576,7 +1826,7 @@
 
       <div class="hero-image-section">
         <div class="hero-image-frame">
-          <img src="hero-before-after.png" alt="Before and after garage cleanout — cluttered garage transformed to clean, empty space" loading="eager" width="600" height="460">
+          <img src="hero-before-after.png" alt="Garage cleanout before and after — cluttered garage transformed to clean empty space" loading="eager">
           <div class="hero-image-label">
             <span class="hero-image-label-side before">Before</span>
             <span class="hero-image-label-side after">After</span>
@@ -1587,7 +1837,44 @@
     <div class="hero-bottom-edge"></div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- NEW-BUSINESS HONESTY RIBBON -->
+  <div class="newbiz-ribbon">
+    <span class="dot"></span>
+    <span>Just launched in Orange County &mdash; <strong>now booking our first Saturdays.</strong> Be one of our first customers.</span>
+  </div>
+
+  <!-- RISK-REVERSAL TRUST BAND -->
+  <section class="trustband">
+    <div class="trustband-inner">
+      <div class="trustband-item">
+        <div class="trustband-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h3>$0 up front</h3>
+          <p>No deposit, no card on file. You pay only after the job is finished &mdash; never before.</p>
+        </div>
+      </div>
+      <div class="trustband-item">
+        <div class="trustband-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <h3>Price locked before we lift a box</h3>
+          <p>You hear the flat number first and sign off on it. No add-ons, no surprises at the end.</p>
+        </div>
+      </div>
+      <div class="trustband-item">
+        <div class="trustband-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <h3>The owners do your job</h3>
+          <p>We're brand new, so you get the two of us &mdash; not a rotating crew &mdash; on every single cleanout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- HOW IT WORKS -->
   <div id="how-it-works" class="reveal">
@@ -1700,7 +1987,7 @@
             <span class="tag">Most Common</span>
             <div class="price">$599</div>
             <div class="price-label">Standard garage cleanout</div>
-            <p class="price-desc">Full cleanout, haul away, sweep, and disposal. This is what 9 out of 10 customers pay.</p>
+            <p class="price-desc">Full cleanout, haul away, sweep, and disposal. Covers most standard one- and two-car garages.</p>
             <ul class="pricing-includes">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything removed</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Garage swept clean</li>
@@ -1719,6 +2006,21 @@
             </ul>
           </div>
         </div>
+        <div class="price-anchor">
+          <div class="price-anchor-row">
+            <div class="price-anchor-side them">
+              <span class="pa-label">Typical junk hauler</span>
+              <span class="pa-amount">$800&ndash;$1,500+</span>
+              <span class="pa-note">Charged by the truckload &mdash; fees stack up fast</span>
+            </div>
+            <div class="price-anchor-side us">
+              <span class="pa-label">OC Garage Cleanout</span>
+              <span class="pa-amount">$599 flat</span>
+              <span class="pa-note">Whole garage, all-in. One price, no add-ons.</span>
+            </div>
+          </div>
+          <div class="price-anchor-kicker">The fuller your garage, the better the deal.</div>
+        </div>
         <div class="pricing-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
           <span>We confirm the price before any work starts. You sign off on the number, and that's what you pay. No add-ons, no "well actually" at the end.</span>
@@ -1736,46 +2038,55 @@
 
   <div class="section-divider"></div>
 
-  <!-- ABOUT / TRUST -->
-  <div class="reveal">
+  <!-- FOUNDERS — TRUST CENTERPIECE -->
+  <div class="founders reveal">
     <div class="container">
       <div class="section">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">A local team you can trust in your home.</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>We're a small, local crew based right here in Orange County. We started this business because we saw too many homeowners getting vague quotes from hauling companies &mdash; prices that balloon on the day, hidden fees, crews that don't show up. We do one thing and do it well: garage cleanouts at a flat, honest price.</p>
-            <p>We service garages only &mdash; not attics, basements, or interior rooms. That focus is what lets us keep the price simple and the quality high.</p>
-          </div>
-          <div class="about-credentials">
-            <div class="credential">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Orange County Based
-            </div>
-            <div class="credential">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Satisfaction Guaranteed
-            </div>
-            <div class="credential">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              No Upfront Payment
-            </div>
-            <div class="credential">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              Garages Only Specialists
-            </div>
-          </div>
-          <div class="team-grid">
-            <div class="team-card">
-              <img class="team-photo" src="jesse-photo.jpg" alt="Jesse Enright, Co-Founder of OC Garage Cleanout" width="72" height="72">
+        <div class="section-label">Meet the Owners</div>
+        <h2 class="section-title">Two local guys. One honest price.</h2>
+        <div class="founders-grid">
+          <div class="founders-photos">
+            <div class="founder-photo-card">
+              <div class="founder-photo-wrap">
+                <img src="jesse-photo.jpg" alt="Jesse Enright, Co-Founder of OC Garage Cleanout" onerror="this.parentElement.textContent='Jesse\'s photo'">
+              </div>
               <div class="team-name">Jesse Enright</div>
               <div class="team-title">Co-Founder</div>
             </div>
-            <div class="team-card">
-              <img class="team-photo" src="artie-photo.jpg" alt="Arthur Varela, Co-Founder of OC Garage Cleanout" width="72" height="72">
+            <div class="founder-photo-card">
+              <div class="founder-photo-wrap">
+                <img src="artie-photo.jpg" alt="Arthur Varela, Co-Founder of OC Garage Cleanout" onerror="this.parentElement.textContent='Arthur\'s photo'">
+              </div>
               <div class="team-name">Arthur Varela</div>
               <div class="team-title">Co-Founder</div>
             </div>
+          </div>
+          <div class="founders-promise">
+            <span class="quote-mark">&ldquo;</span>
+            <p>We just started OC Garage Cleanout, right here in Orange County. We don't have a hundred reviews yet &mdash; we have something better: <strong>the two of us show up to every single job.</strong></p>
+            <p>We started this because we were tired of seeing hauling companies give a price on the phone, then pile on fees once your stuff was already on the truck. So we made one rule: <strong>you hear the flat price first, and you don't pay a cent until you've walked your clean garage.</strong></p>
+            <div class="founders-sign">
+              Jesse &amp; Arthur
+              <span>Co-Founders &middot; Orange County</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-credentials" style="margin-top: 40px;">
+          <div class="credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Family &amp; Locally Owned
+          </div>
+          <div class="credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Based in Orange County
+          </div>
+          <div class="credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            No Upfront Payment
+          </div>
+          <div class="credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+            Garage Specialists Only
           </div>
         </div>
       </div>
@@ -1869,6 +2180,15 @@
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">
+              You're brand new &mdash; why should I trust you?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Fair question &mdash; we're upfront about being new. Here's why it works in your favor: the two owners personally do every job, you meet us before anything moves, and you pay nothing until you've walked through your finished garage. The risk is entirely on us. We're building our reputation one garage at a time, and that means your job gets our full attention.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
               Do I need to be home during the cleanout?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
@@ -1891,7 +2211,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">We've seen it all. If your garage is packed floor-to-ceiling or it's an oversized three-car setup, the price may be $799 instead of $599. We'll confirm the exact price before we start &mdash; never after. No surprises.</div>
+              <div class="faq-answer-inner">Packed floor-to-ceiling? An oversized three-car setup? No problem &mdash; the price may be $799 instead of $599. We'll confirm the exact price before we start &mdash; never after. No surprises.</div>
             </div>
           </div>
           <div class="faq-item">
@@ -1930,7 +2250,7 @@
   <section class="final-cta">
     <div class="final-cta-layout">
       <div class="final-cta-image">
-        <img src="after-garage.jpg" alt="Clean organized garage after cleanout — open floor space, neatly arranged" loading="lazy">
+        <img src="hero-before-after.png" alt="Clean garage after OC Garage Cleanout service" style="border-radius: var(--radius);">
       </div>
       <div class="final-cta-content">
         <h2>Ready to take back your garage?</h2>
@@ -2118,7 +2438,6 @@
       from { opacity: 1; transform: translateY(0); }
       to { opacity: 0; transform: translateY(8px); pointer-events: none; }
     }
-
 
     .cw-panel {
       display: none;
